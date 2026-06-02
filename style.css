@@ -56,16 +56,14 @@ button, input, select, textarea { font: inherit; }
   color: var(--gray-500);
 }
 
-/* Material icons */
-.material-symbols-outlined {
-  font-family: "Material Symbols Outlined";
-  font-weight: normal;
-  font-style: normal;
-  font-size: inherit;
-  line-height: 1;
+/* Inline icon system */
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex-shrink: 0;
   display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
 }
 
 /* Buttons */
@@ -405,7 +403,7 @@ button, input, select, textarea { font: inherit; }
 }
 
 .form-success.is-visible { display: block; }
-.form-success .material-symbols-outlined { font-size: 2.5rem; margin-bottom: 8px; }
+.form-success .icon { font-size: 2.5rem; margin-bottom: 8px; }
 
 .lead-form.is-submitted .lead-form__fields { display: none; }
 
@@ -541,9 +539,8 @@ button, input, select, textarea { font: inherit; }
   place-items: center;
 }
 
-.pain-point-card__icon .material-symbols-outlined {
+.pain-point-card__icon .icon {
   font-size: 1.35rem;
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
 }
 
 .pain-point-card__body h3 {
@@ -586,9 +583,8 @@ button, input, select, textarea { font: inherit; }
   place-items: center;
 }
 
-.benefit-card__icon .material-symbols-outlined {
+.benefit-card__icon .icon {
   font-size: 2rem;
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
 }
 
 .benefit-card h3 {
@@ -638,10 +634,9 @@ button, input, select, textarea { font: inherit; }
   line-height: 1.45;
 }
 
-.highlights-list .material-symbols-outlined {
+.highlights-list .icon {
   color: var(--red);
   font-size: 1.15rem;
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -813,7 +808,7 @@ section#learn .topic-card {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
 }
 
-.topic-card .material-symbols-outlined {
+.topic-card .icon {
   display: grid;
   place-items: center;
   width: 56px;
@@ -824,7 +819,6 @@ section#learn .topic-card {
   border: 1px solid rgba(181, 18, 27, 0.2);
   color: var(--red);
   font-size: 2.35rem;
-  font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 48;
 }
 
 /* International support */
@@ -866,24 +860,48 @@ section#learn .topic-card {
 
 .support-panel {
   background: var(--white);
-  border-radius: 12px;
-  padding: 22px;
-  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(30, 30, 30, 0.06);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
   height: 100%;
 }
 
 .support-panel--list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+}
+
+.support-panel__heading {
+  display: grid;
+  gap: 6px;
+}
+
+.support-panel__eyebrow {
+  display: inline-block;
+  margin: 0;
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 .support-panel__title {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
   color: var(--charcoal);
+}
+
+.support-panel__microcopy {
+  margin: 0;
+  color: var(--gray-500);
+  font-size: 0.84rem;
+  line-height: 1.4;
 }
 
 .support-list {
@@ -892,27 +910,42 @@ section#learn .topic-card {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
   flex: 1;
 }
 
 .support-card {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  gap: 10px;
+  align-items: center;
   background: var(--gray-100);
-  border-radius: 10px;
-  padding: 14px;
+  border-radius: 9px;
+  padding: 11px 12px;
   border: 1px solid var(--gray-200);
-  min-height: 88px;
+  min-height: 72px;
   height: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.support-card:hover,
+.support-card:focus-visible,
+.support-card:focus-within {
+  border-color: #dca3a8;
+  background: var(--white);
+  box-shadow: 0 6px 16px rgba(190, 55, 69, 0.12);
+  transform: translateY(-1px);
+}
+
+.support-card:focus-visible {
+  outline: 2px solid rgba(190, 55, 69, 0.32);
+  outline-offset: 1px;
 }
 
 .support-card__icon {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 9px;
   background: var(--white);
   border: 1px solid #dca3a8;
   color: var(--red);
@@ -920,16 +953,17 @@ section#learn .topic-card {
   place-items: center;
 }
 
-.support-card__icon .material-symbols-outlined {
-  font-size: 1.25rem;
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
+.support-card__icon .icon {
+  font-size: 1.1rem;
 }
 
 .support-card__label {
   align-self: center;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
   color: var(--charcoal);
 }
 
@@ -976,10 +1010,9 @@ section#learn .topic-card {
   box-shadow: var(--shadow);
 }
 
-.checklist .material-symbols-outlined {
+.checklist .icon {
   color: var(--red);
   flex-shrink: 0;
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
 }
 
 .checklist-cta { text-align: center; }
@@ -1015,12 +1048,12 @@ section#learn .topic-card {
   color: var(--charcoal);
 }
 
-.faq-item__question .material-symbols-outlined {
+.faq-item__question .icon {
   transition: transform 0.2s;
   color: var(--red);
 }
 
-.faq-item.is-open .faq-item__question .material-symbols-outlined {
+.faq-item.is-open .faq-item__question .icon {
   transform: rotate(180deg);
 }
 
@@ -1213,11 +1246,18 @@ section.cta-band .btn--outline-light:hover {
 
   .support-header { margin-bottom: 28px; }
   .support-grid { gap: 24px; align-items: stretch; }
+  .support-panel { padding: 18px; }
+  .support-panel__heading { gap: 5px; }
+  .support-panel__microcopy { font-size: 0.82rem; }
   .support-list {
     grid-template-columns: 1fr;
+    gap: 9px;
   }
-  .support-panel { padding: 18px; }
-  .support-card { min-height: 0; }
+  .support-card {
+    min-height: 0;
+    padding: 10px 11px;
+  }
+  .support-card__label { font-size: 0.86rem; }
 
   .stats-band { padding: 36px 0; }
   .stats-band__grid { gap: 20px; }
@@ -1244,7 +1284,7 @@ section.cta-band .btn--outline-light:hover {
     font-size: 0.85rem;
   }
 
-  .topic-card .material-symbols-outlined {
+  .topic-card .icon {
     width: 50px;
     height: 50px;
     font-size: 2.1rem;
