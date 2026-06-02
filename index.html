@@ -70,6 +70,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <!-- Hero -->
   <section class="hero">
     <div class="container hero__grid">
@@ -320,11 +321,31 @@
           </div>
         </div>
         <div class="highlights-media reveal reveal--right">
-          <div class="video-wrap">
-            <video controls playsinline preload="metadata" aria-label="Dental Assisting program introduction video">
-              <source src="https://d1utq6mu7oj8xi.cloudfront.net/info/reevescollege/programs/videos/Dental-Assisting-AB-295-2025-09-12-10-57-10.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div class="video-lite" data-video-provider="youtube" data-video-id="zdUvtYsuNgI" data-video-title="Dental Assisting program highlights">
+            <div class="video-wrap">
+              <button type="button" class="video-lite__button" aria-label="Play Dental Assisting program highlights video">
+                <img
+                  class="video-lite__thumbnail"
+                  src="https://i.ytimg.com/vi/zdUvtYsuNgI/hqdefault.jpg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="video-lite__shade" aria-hidden="true"></span>
+                <span class="video-lite__play" aria-hidden="true"></span>
+                <span class="video-lite__cta">Play video</span>
+              </button>
+            </div>
+            <p class="video-lite__fallback">
+              Video unavailable?
+              <a href="https://www.youtube.com/watch?v=zdUvtYsuNgI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            </p>
+            <noscript>
+              <p class="video-lite__noscript">
+                JavaScript is required to play this video inline.
+                <a href="https://www.youtube.com/watch?v=zdUvtYsuNgI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              </p>
+            </noscript>
           </div>
         </div>
       </div>
@@ -390,14 +411,31 @@
             Admissions can explain program requirements. Confirm immigration or work eligibility with official or licensed immigration resources.
           </div>
           <div class="support-video">
-            <div class="video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/zdUvtYsuNgI"
-                title="Reeves College student testimonial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+            <div class="video-lite" data-video-provider="youtube" data-video-id="zdUvtYsuNgI" data-video-title="Reeves College student testimonial">
+              <div class="video-wrap">
+                <button type="button" class="video-lite__button" aria-label="Play Reeves College student testimonial video">
+                  <img
+                    class="video-lite__thumbnail"
+                    src="https://i.ytimg.com/vi/zdUvtYsuNgI/hqdefault.jpg"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="video-lite__shade" aria-hidden="true"></span>
+                  <span class="video-lite__play" aria-hidden="true"></span>
+                  <span class="video-lite__cta">Play video</span>
+                </button>
+              </div>
+              <p class="video-lite__fallback">
+                Video unavailable?
+                <a href="https://www.youtube.com/watch?v=zdUvtYsuNgI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+              </p>
+              <noscript>
+                <p class="video-lite__noscript">
+                  JavaScript is required to play this video inline.
+                  <a href="https://www.youtube.com/watch?v=zdUvtYsuNgI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </p>
+              </noscript>
             </div>
           </div>
         </aside>
@@ -494,6 +532,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer" id="campuses">
@@ -506,7 +545,7 @@
           <p class="footer-about">Career-focused diplomas to build skills in Canada.</p>
         </div>
         <div class="reveal reveal--soft">
-          <h4>Programs</h4>
+          <p class="footer-heading">Programs</p>
           <ul>
             <li><a href="#programs">Dental Assisting</a></li>
             <li><a href="#learn">What You'll Learn</a></li>
@@ -514,7 +553,7 @@
           </ul>
         </div>
         <div class="reveal reveal--soft">
-          <h4>Admissions</h4>
+          <p class="footer-heading">Admissions</p>
           <ul>
             <li><a href="#request-info">Request Program Info</a></li>
             <li><a href="#admissions">Admissions Checklist</a></li>
@@ -523,7 +562,7 @@
           </ul>
         </div>
         <div class="reveal reveal--soft">
-          <h4>Campuses</h4>
+          <p class="footer-heading">Campuses</p>
           <ul>
             <li><a href="tel:18002697095">1-800-269-7095</a></li>
             <li>Calgary Campus</li>

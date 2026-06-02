@@ -44,6 +44,42 @@
     });
   });
 
+  /* Click-to-load videos */
+  function buildYouTubeEmbedUrl(videoId) {
+    return 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+  }
+
+  function loadLiteVideo(container) {
+    if (!container || container.classList.contains('is-loaded')) return;
+
+    var provider = container.getAttribute('data-video-provider');
+    var videoId = container.getAttribute('data-video-id');
+    var videoTitle = container.getAttribute('data-video-title') || 'Embedded video player';
+    var videoWrap = container.querySelector('.video-wrap');
+
+    if (!videoWrap || !videoId || provider !== 'youtube') return;
+
+    var iframe = document.createElement('iframe');
+    iframe.src = buildYouTubeEmbedUrl(videoId);
+    iframe.title = videoTitle;
+    iframe.loading = 'lazy';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allowFullscreen = true;
+
+    videoWrap.textContent = '';
+    videoWrap.appendChild(iframe);
+    container.classList.add('is-loaded');
+  }
+
+  document.querySelectorAll('.video-lite').forEach(function (videoLite) {
+    var trigger = videoLite.querySelector('.video-lite__button');
+    if (!trigger) return;
+    trigger.addEventListener('click', function () {
+      loadLiteVideo(videoLite);
+    });
+  });
+
   /* Form validation & submission */
   function validateEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
