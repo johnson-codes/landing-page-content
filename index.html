@@ -3,962 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reeves College — Dental Assisting Program</title>
+  <meta name="description" content="Reeves College Dental Assisting diploma for international students in Canada. Build practical healthcare skills and explore your next step with admissions support." />
+  <title>Reeves College — Dental Assisting for International Students</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" />
-  <style>
-    :root {
-      --red: #b5121b;
-      --red-dark: #8f0e16;
-      --charcoal: #2b2b2b;
-      --gray-100: #f4f4f4;
-      --gray-200: #e8e8e8;
-      --gray-500: #6b6b6b;
-      --white: #ffffff;
-      --header-height: 72px;
-      --announce-height: 40px;
-      --sticky-offset: calc(var(--header-height) + var(--announce-height));
-      --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: var(--sticky-offset);
-    }
-
-    body {
-      margin: 0;
-      color: var(--charcoal);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
-
-    .material-symbols-outlined {
-      font-family: "Material Symbols Outlined";
-      font-weight: normal;
-      font-style: normal;
-      font-size: inherit;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      -webkit-font-smoothing: antialiased;
-      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-    }
-
-    .program-card__img .material-symbols-outlined {
-      font-size: 3rem;
-    }
-
-    .feature__icon .material-symbols-outlined {
-      font-size: 1.75rem;
-    }
-
-    .container {
-      width: min(1120px, 100% - 32px);
-      margin-inline: auto;
-    }
-
-    /* ── Sticky site header ── */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--white);
-      transition: box-shadow 0.2s ease;
-    }
-
-    .site-header.is-scrolled {
-      box-shadow: var(--shadow);
-    }
-
-    .top-bar {
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .top-bar__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: var(--header-height);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .logo__img {
-      height: 42px;
-      width: auto;
-    }
-
-    .logo__img--footer {
-      height: 38px;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav__links a {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--charcoal);
-      transition: color 0.15s;
-    }
-
-    .nav__links a:hover {
-      color: var(--red);
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .phone-box {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      background: var(--gray-100);
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      white-space: nowrap;
-      color: var(--charcoal);
-    }
-
-    .phone-box svg {
-      flex-shrink: 0;
-      color: var(--red);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.92rem;
-      cursor: pointer;
-      transition: background 0.15s, transform 0.1s;
-    }
-
-    .btn:active {
-      transform: scale(0.98);
-    }
-
-    .btn--primary {
-      background: var(--red);
-      color: var(--white);
-    }
-
-    .btn--primary:hover {
-      background: var(--red-dark);
-    }
-
-    .btn--outline {
-      background: transparent;
-      border: 2px solid var(--red);
-      color: var(--red);
-    }
-
-    .btn--outline:hover {
-      background: var(--red);
-      color: var(--white);
-    }
-
-    .btn--outline-light {
-      background: transparent;
-      border: 2px solid var(--white);
-      color: var(--white);
-    }
-
-    .btn--outline-light:hover {
-      background: var(--white);
-      color: var(--charcoal);
-    }
-
-    .icon-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border: none;
-      border-radius: 6px;
-      background: transparent;
-      color: var(--charcoal);
-      cursor: pointer;
-    }
-
-    .icon-btn:hover {
-      background: var(--gray-100);
-    }
-
-    .announce-bar {
-      background: var(--red);
-      color: var(--white);
-      text-align: center;
-      font-size: 0.88rem;
-      font-weight: 600;
-      padding: 10px 16px;
-    }
-
-    .announce-bar a {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .announce-bar a:hover {
-      opacity: 0.9;
-    }
-
-    /* Mobile-only / desktop-only helpers */
-    .mobile-only { display: none; }
-    .desktop-only { display: flex; }
-
-    .phone-icon-btn {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 6px;
-      background: var(--gray-100);
-      color: var(--red);
-    }
-
-    .menu-toggle {
-      display: none;
-    }
-
-    /* Mobile nav drawer */
-    .mobile-nav {
-      display: none;
-      border-top: 1px solid var(--gray-200);
-      background: var(--white);
-      padding: 16px 0 20px;
-    }
-
-    .mobile-nav.is-open {
-      display: block;
-    }
-
-    .mobile-nav__links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .mobile-nav__links li + li {
-      border-top: 1px solid var(--gray-200);
-    }
-
-    .mobile-nav__links a {
-      display: block;
-      padding: 14px 0;
-      font-weight: 500;
-      color: var(--charcoal);
-    }
-
-    .mobile-nav__links a:hover {
-      color: var(--red);
-    }
-
-    /* ── Hero ── */
-    .hero {
-      background: var(--gray-100);
-      color: var(--charcoal);
-      padding: 56px 0;
-    }
-
-    .hero__grid {
-      display: grid;
-      grid-template-columns: 1fr minmax(340px, 420px);
-      gap: 32px;
-      align-items: center;
-    }
-
-    .hero__content {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 40px 44px;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--red);
-    }
-
-    .hero__form-first {
-      align-self: center;
-    }
-
-    .hero__eyebrow {
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin-bottom: 16px;
-    }
-
-    .hero h1 {
-      margin: 0 0 16px;
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      line-height: 1.15;
-      font-weight: 700;
-      color: var(--charcoal);
-    }
-
-    .hero__lead {
-      margin: 0 0 24px;
-      font-size: 1.05rem;
-      color: #444;
-      max-width: 540px;
-      line-height: 1.65;
-    }
-
-    .hero__bullets {
-      list-style: none;
-      margin: 0 0 28px;
-      padding: 0;
-      display: grid;
-      gap: 10px;
-    }
-
-    .hero__bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.95rem;
-      color: #333;
-    }
-
-    .hero__bullets li::before {
-      content: "✓";
-      color: var(--red);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .hero__cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* ── Lead form ── */
-    .lead-form {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 28px;
-      color: var(--charcoal);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    .lead-form h2 {
-      margin: 0 0 4px;
-      font-size: 1.35rem;
-      color: var(--red);
-    }
-
-    .lead-form__sub {
-      margin: 0 0 20px;
-      font-size: 0.88rem;
-      color: var(--gray-500);
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: var(--charcoal);
-    }
-
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 10px 12px;
-      border: 1px solid var(--gray-200);
-      border-radius: 6px;
-      background: var(--white);
-      color: var(--charcoal);
-    }
-
-    .form-group input:focus,
-    .form-group select:focus {
-      outline: 2px solid var(--red);
-      outline-offset: 1px;
-      border-color: var(--red);
-    }
-
-    .lead-form .btn {
-      width: 100%;
-      margin-top: 6px;
-      padding: 13px;
-      font-size: 1rem;
-    }
-
-    .form-disclaimer {
-      margin: 12px 0 0;
-      font-size: 0.72rem;
-      color: var(--gray-500);
-      line-height: 1.4;
-    }
-
-    /* ── Sections ── */
-    section {
-      padding: 64px 0;
-    }
-
-    section:nth-child(even):not(.hero):not(.cta-band) {
-      background: var(--gray-100);
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 40px;
-    }
-
-    .section-header h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--charcoal);
-    }
-
-    .section-header p {
-      margin: 0;
-      color: var(--gray-500);
-    }
-
-    /* Programs */
-    .programs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .program-card {
-      background: var(--white);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .program-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .program-card__img {
-      height: 160px;
-      background: linear-gradient(135deg, var(--red) 0%, #6b1015 100%);
-      display: grid;
-      place-items: center;
-      color: var(--white);
-      font-size: 2.5rem;
-    }
-
-    .program-card__body {
-      padding: 20px;
-    }
-
-    .program-card__body h3 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
-    }
-
-    .program-card__body p {
-      margin: 0 0 16px;
-      font-size: 0.88rem;
-      color: var(--gray-500);
-    }
-
-    .program-card__meta {
-      display: flex;
-      gap: 16px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--red);
-    }
-
-    /* Why choose us */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .feature {
-      text-align: center;
-      padding: 24px 16px;
-    }
-
-    .feature__icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      background: var(--red);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-size: 1.4rem;
-    }
-
-    .feature h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-    }
-
-    .feature p {
-      margin: 0;
-      font-size: 0.88rem;
-      color: var(--gray-500);
-    }
-
-    /* Stats band */
-    .stats-band {
-      background: var(--red);
-      color: var(--white);
-      padding: 48px 0;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: center;
-    }
-
-    .stat__number {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .stat__label {
-      font-size: 0.88rem;
-      opacity: 0.9;
-    }
-
-    /* Video embeds */
-    .video-wrap {
-      position: relative;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #000;
-      box-shadow: var(--shadow);
-    }
-
-    .video-wrap--16x9 {
-      aspect-ratio: 16 / 9;
-    }
-
-    .video-wrap video,
-    .video-wrap iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    /* Program intro */
-    .program-intro {
-      background: var(--white);
-    }
-
-    .program-intro__grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .program-intro__content h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--charcoal);
-    }
-
-    .program-intro__content p {
-      margin: 0 0 16px;
-      color: var(--gray-500);
-    }
-
-    .program-intro__bullets {
-      list-style: none;
-      margin: 0 0 24px;
-      padding: 0;
-      display: grid;
-      gap: 8px;
-    }
-
-    .program-intro__bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.92rem;
-    }
-
-    .program-intro__bullets li::before {
-      content: "✓";
-      color: var(--red);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .program-intro__meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .program-intro__tag {
-      background: var(--gray-100);
-      color: var(--charcoal);
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 999px;
-    }
-
-    /* Testimonials */
-    .testimonial-feature {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .testimonial-feature__content h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-    }
-
-    .testimonial-feature__content p {
-      margin: 0 0 20px;
-      color: var(--gray-500);
-    }
-
-    /* CTA band */
-    section.cta-band {
-      background: var(--charcoal);
-      color: var(--white);
-      text-align: center;
-      padding: 64px 0;
-    }
-
-    section.cta-band h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--white);
-    }
-
-    section.cta-band p {
-      margin: 0 auto 28px;
-      max-width: 520px;
-      color: #e8e8e8;
-    }
-
-    .cta-band__actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: var(--white);
-      color: var(--charcoal);
-      padding: 48px 0 24px;
-      font-size: 0.88rem;
-      border-top: 1px solid var(--gray-200);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 32px;
-      margin-bottom: 32px;
-    }
-
-    .footer-grid h4 {
-      color: var(--charcoal);
-      margin: 0 0 14px;
-      font-size: 0.92rem;
-    }
-
-    .footer-grid ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .footer-grid a {
-      color: var(--gray-500);
-      transition: color 0.15s;
-    }
-
-    .footer-grid li + li {
-      margin-top: 8px;
-    }
-
-    .footer-grid a:hover {
-      color: var(--red);
-    }
-
-    .footer-about {
-      margin: 0;
-      color: var(--gray-500);
-      line-height: 1.5;
-    }
-
-    .footer-logo {
-      margin-bottom: 14px;
-      display: inline-flex;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid var(--gray-200);
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.82rem;
-      color: var(--gray-500);
-    }
-
-    /* ── Subtle scroll reveal ── */
-    @media (prefers-reduced-motion: no-preference) {
-      .reveal {
-        opacity: 0;
-        transform: translateY(18px);
-        transition:
-          opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-        transition-delay: var(--reveal-delay, 0ms);
-      }
-
-      .reveal.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .reveal--left {
-        transform: translateX(-20px);
-      }
-
-      .reveal--right {
-        transform: translateX(20px);
-      }
-
-      .reveal--left.is-visible,
-      .reveal--right.is-visible {
-        transform: translateX(0);
-      }
-
-      .reveal--soft {
-        transform: translateY(12px) scale(0.985);
-      }
-
-      .reveal--soft.is-visible {
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
-
-    /* ── Mobile responsive ── */
-    @media (max-width: 900px) {
-      :root {
-        --header-height: 60px;
-        --announce-height: 34px;
-      }
-
-      .desktop-only { display: none !important; }
-
-      .mobile-only { display: flex; }
-
-      .menu-toggle { display: inline-flex; }
-
-      .phone-icon-btn { display: inline-flex; }
-
-      .top-bar__inner {
-        gap: 8px;
-      }
-
-      .logo__img {
-        height: 34px;
-      }
-
-      .header-actions .btn--primary {
-        padding: 8px 14px;
-        font-size: 0.82rem;
-      }
-
-      .announce-bar {
-        font-size: 0.78rem;
-        padding: 8px 12px;
-      }
-
-      /* Form first on mobile */
-      .hero {
-        padding: 24px 0 40px;
-      }
-
-      .hero__grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .hero__content {
-        padding: 28px 24px;
-        order: 1;
-      }
-
-      .hero__form-first {
-        order: -1;
-      }
-
-      .hero__cta-row .btn {
-        width: 100%;
-      }
-
-      .programs-grid,
-      .features-grid,
-      .program-intro__grid,
-      .testimonial-feature {
-        grid-template-columns: 1fr;
-      }
-
-      .program-intro__video {
-        order: -1;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .cta-band__actions .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Sticky header -->
   <header class="site-header" id="site-header">
     <div class="top-bar">
       <div class="container top-bar__inner">
-
         <a href="#" class="logo" aria-label="Reeves College home">
-          <img
-            src="assets/logo-desktop.svg"
-            alt="Reeves College"
-            class="logo__img"
-            width="173"
-            height="50"
-          />
+          <img src="assets/logo-desktop.svg" alt="Reeves College" class="logo__img" width="173" height="50" />
         </a>
 
-        <!-- Desktop nav -->
         <nav class="nav desktop-only" aria-label="Main navigation">
           <ul class="nav__links">
-            <li><a href="#program-intro">Program Video</a></li>
             <li><a href="#programs">Programs</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#testimonials">Success Stories</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#international">International Students</a></li>
+            <li><a href="#campuses">Campuses</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <div class="header-actions">
-          <!-- Desktop phone -->
           <a href="tel:18002697095" class="phone-box desktop-only">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -966,7 +35,6 @@
             1-800-269-7095
           </a>
 
-          <!-- Mobile phone icon -->
           <a href="tel:18002697095" class="phone-icon-btn mobile-only" aria-label="Call 1-800-269-7095">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -975,14 +43,6 @@
 
           <a href="#request-info" class="btn btn--primary">Request Info</a>
 
-          <!-- Desktop search -->
-          <button class="icon-btn desktop-only" aria-label="Search">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-            </svg>
-          </button>
-
-          <!-- Mobile hamburger -->
           <button class="icon-btn menu-toggle mobile-only" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
@@ -991,14 +51,13 @@
         </div>
       </div>
 
-      <!-- Mobile nav drawer -->
       <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
         <div class="container">
           <ul class="mobile-nav__links">
-            <li><a href="#program-intro">Program Video</a></li>
             <li><a href="#programs">Programs</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#testimonials">Success Stories</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#international">International Students</a></li>
+            <li><a href="#campuses">Campuses</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="tel:18002697095">Call 1-800-269-7095</a></li>
           </ul>
@@ -1007,7 +66,7 @@
     </div>
 
     <div class="announce-bar">
-      Applications are open. <a href="#request-info">Apply here.</a>
+      Applications are open. <a href="#request-info">Speak with admissions today.</a>
     </div>
   </header>
 
@@ -1015,303 +74,460 @@
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__content reveal reveal--left">
-        <span class="hero__eyebrow">Dental Assisting — Now Enrolling</span>
-        <h1>Start a Rewarding Career in Dental Assisting</h1>
-        <p class="hero__lead">
-          Reeves College's Dental Assisting program gives you hands-on training in chairside
-          procedures, patient care, and dental office administration — so you graduate job-ready.
-        </p>
-        <ul class="hero__bullets">
-          <li>Hands-on training in modern dental lab environments</li>
-          <li>Practicum placement to build real-world experience</li>
-          <li>Career services support from enrollment to employment</li>
-        </ul>
-        <div class="hero__cta-row">
-          <a href="#request-info" class="btn btn--primary">Request Info</a>
-          <a href="#program-intro" class="btn btn--outline">Watch Program Intro</a>
+        <div class="hero__visual">
+          <img
+            src="assets/hero-dental-team.png"
+            alt="Dental assisting students practicing clinical skills in a modern training lab at Reeves College"
+            width="640"
+            height="480"
+            loading="eager"
+          />
+          <div class="hero__overlay">
+            <span class="hero__eyebrow">International Students Welcome</span>
+            <h1>Build Practical Dental Assisting Skills in Canada</h1>
+          </div>
         </div>
       </div>
 
       <div class="hero__form-first reveal reveal--right" id="request-info">
-        <form class="lead-form" action="#" method="post">
-          <h2>Request Information</h2>
-          <p class="lead-form__sub">Fill out the form and an advisor will contact you shortly.</p>
+        <form class="lead-form" id="lead-form" action="#" method="post" novalidate>
+          <div id="lead-form-fields" class="lead-form__fields">
+            <h2>Request Program Info</h2>
+            <p class="lead-form__sub">An admissions advisor will follow up with details and next steps.</p>
 
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first_name" required autocomplete="given-name" />
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last_name" required autocomplete="family-name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel" />
-          </div>
-          <div class="form-group">
-            <label for="program">Program of Interest</label>
-            <select id="program" name="program" required>
-              <option value="">Select a program</option>
-              <option selected>Dental Assisting</option>
-              <option>Business Administration</option>
-              <option>Health Care Assistant</option>
-              <option>Legal Assistant</option>
-              <option>Graphic Design</option>
-              <option>Accounting &amp; Payroll</option>
-            </select>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" required autocomplete="given-name" />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" required autocomplete="family-name" />
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email" />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="status">Status in Canada</label>
+                <select id="status" name="status" required>
+                  <option value="">Select status</option>
+                  <option>International student in Canada</option>
+                  <option>International student outside Canada</option>
+                  <option>Work permit holder</option>
+                  <option>Visitor in Canada</option>
+                  <option>Permanent resident / citizen</option>
+                  <option>Not sure</option>
+                </select>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="studying">Studying in Canada?</label>
+                <select id="studying" name="studying" required>
+                  <option value="">Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Not sure</option>
+                </select>
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="campus">Preferred Campus</label>
+                <select id="campus" name="campus" required>
+                  <option value="">Select campus</option>
+                  <option>Calgary</option>
+                  <option>Edmonton</option>
+                  <option>Lloydminster</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="start-date">Start timeframe</label>
+                <select id="start-date" name="start_date" required>
+                  <option value="">Select</option>
+                  <option>As soon as possible</option>
+                  <option>Within 3 months</option>
+                  <option>Within 6 months</option>
+                  <option>Within 1 year</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Get Program Info</button>
+            <p class="form-disclaimer">
+              By submitting this form, you agree to be contacted by Reeves College regarding program information. Your information will not be shared with third parties.
+            </p>
           </div>
 
-          <button type="submit" class="btn btn--primary">Request Info</button>
-          <p class="form-disclaimer">
-            By submitting this form, you agree to be contacted by Reeves College regarding program information.
-            Your information will not be shared with third parties.
-          </p>
+          <div class="form-success" id="form-success" role="status">
+            <span class="material-symbols-outlined">check_circle</span>
+            <p><strong>Thank you!</strong> An admissions advisor will contact you soon with program information and next steps.</p>
+          </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Program intro video -->
-  <section class="program-intro" id="program-intro">
-    <div class="container program-intro__grid">
-      <div class="program-intro__content reveal reveal--left">
-        <h2>Inside the Dental Assisting Program</h2>
-        <p>
-          Watch our program introduction to see what you'll learn, the skills you'll build,
-          and how Reeves College prepares you for a career in dental health care.
-        </p>
-        <div class="program-intro__meta">
-          <span class="program-intro__tag">Diploma Program</span>
-          <span class="program-intro__tag">Alberta</span>
-          <span class="program-intro__tag">Hands-On Training</span>
-        </div>
-        <ul class="program-intro__bullets">
-          <li>Chairside assisting and infection control protocols</li>
-          <li>Dental radiography and clinical procedures</li>
-          <li>Patient communication and office administration</li>
-        </ul>
-        <a href="#request-info" class="btn btn--primary">Request Info</a>
-      </div>
-      <div class="program-intro__video reveal reveal--right">
-        <div class="video-wrap video-wrap--16x9">
-          <video
-            controls
-            playsinline
-            preload="metadata"
-            poster=""
-            aria-label="Dental Assisting program introduction video"
-          >
-            <source
-              src="https://d1utq6mu7oj8xi.cloudfront.net/info/reevescollege/programs/videos/Dental-Assisting-AB-295-2025-09-12-10-57-10.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programs -->
-  <section id="programs">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Explore Our Programs</h2>
-        <p>Industry-relevant diploma programs designed to prepare you for real-world careers.</p>
-      </div>
-      <div class="programs-grid reveal-group">
-        <article class="program-card reveal reveal--soft">
-          <div class="program-card__img" aria-hidden="true">
-            <span class="material-symbols-outlined">dentistry</span>
-          </div>
-          <div class="program-card__body">
-            <h3>Dental Assisting</h3>
-            <p>Train for chairside assisting, radiography, and dental office procedures in a hands-on clinical setting.</p>
-            <div class="program-card__meta">
-              <span>49 weeks</span>
-              <span>Diploma</span>
-            </div>
-          </div>
-        </article>
-        <article class="program-card reveal reveal--soft">
-          <div class="program-card__img" aria-hidden="true">
-            <span class="material-symbols-outlined">business_center</span>
-          </div>
-          <div class="program-card__body">
-            <h3>Business Administration</h3>
-            <p>Develop leadership, communication, and management skills for today's business environment.</p>
-            <div class="program-card__meta">
-              <span>52 weeks</span>
-              <span>Diploma</span>
-            </div>
-          </div>
-        </article>
-        <article class="program-card reveal reveal--soft">
-          <div class="program-card__img" aria-hidden="true">
-            <span class="material-symbols-outlined">local_hospital</span>
-          </div>
-          <div class="program-card__body">
-            <h3>Health Care Assistant</h3>
-            <p>Gain practical skills to support patients and work alongside health care professionals.</p>
-            <div class="program-card__meta">
-              <span>34 weeks</span>
-              <span>Diploma</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why us -->
-  <section id="why-us">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>Why Choose Reeves College</h2>
-        <p>We are committed to helping you build the skills employers are looking for.</p>
-      </div>
-      <div class="features-grid reveal-group">
-        <div class="feature reveal reveal--soft">
-          <div class="feature__icon" aria-hidden="true">
-            <span class="material-symbols-outlined">school</span>
-          </div>
-          <h3>Experienced Instructors</h3>
-          <p>Learn from professionals with real industry experience.</p>
-        </div>
-        <div class="feature reveal reveal--soft">
-          <div class="feature__icon" aria-hidden="true">
-            <span class="material-symbols-outlined">handyman</span>
-          </div>
-          <h3>Hands-On Training</h3>
-          <p>Practical, career-focused curriculum with real-world applications.</p>
-        </div>
-        <div class="feature reveal reveal--soft">
-          <div class="feature__icon" aria-hidden="true">
-            <span class="material-symbols-outlined">calendar_month</span>
-          </div>
-          <h3>Flexible Start Dates</h3>
-          <p>New programs begin regularly so you can start when you're ready.</p>
-        </div>
-        <div class="feature reveal reveal--soft">
-          <div class="feature__icon" aria-hidden="true">
-            <span class="material-symbols-outlined">work</span>
-          </div>
-          <h3>Career Services</h3>
-          <p>Resume help, interview prep, and job search support.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Stats -->
-  <div class="stats-band">
-    <div class="container stats-grid reveal-group">
-      <div class="reveal reveal--soft">
-        <div class="stat__number">50+</div>
-        <div class="stat__label">Years of Excellence</div>
+  <section class="stats-band" aria-label="Reeves College at a glance">
+    <div class="container stats-band__grid reveal-group">
+      <div class="stat-item reveal reveal--soft">
+        <span class="stat-item__value">
+          <span class="stat-number" data-target="50" data-suffix="+">0+</span>
+        </span>
+        <span class="stat-item__label">Years of career training</span>
       </div>
-      <div class="reveal reveal--soft">
-        <div class="stat__number">15+</div>
-        <div class="stat__label">Career Programs</div>
+      <div class="stat-item reveal reveal--soft">
+        <span class="stat-item__value">
+          <span class="stat-number" data-target="15" data-suffix="+">0+</span>
+        </span>
+        <span class="stat-item__label">Career-focused programs</span>
       </div>
-      <div class="reveal reveal--soft">
-        <div class="stat__number">4</div>
-        <div class="stat__label">Campus Locations</div>
+      <div class="stat-item reveal reveal--soft">
+        <span class="stat-item__value">
+          <span class="stat-number" data-target="4">0</span>
+        </span>
+        <span class="stat-item__label">Alberta campuses</span>
       </div>
-      <div class="reveal reveal--soft">
-        <div class="stat__number">90%</div>
-        <div class="stat__label">Graduate Satisfaction</div>
+      <div class="stat-item reveal reveal--soft">
+        <span class="stat-item__value">
+          <span class="stat-number" data-target="90" data-suffix="%">0%</span>
+        </span>
+        <span class="stat-item__label">Graduate satisfaction</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials">
+  <!-- Pain point -->
+  <section class="section section--muted" id="pain-point">
     <div class="container">
-      <div class="testimonial-feature">
-        <div class="testimonial-feature__video reveal reveal--left">
-          <div class="video-wrap video-wrap--16x9">
-            <iframe
-              src="https://www.youtube.com/embed/zdUvtYsuNgI"
-              title="Reeves College student testimonial"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+      <div class="pain-point reveal-group">
+        <div class="pain-point__intro reveal reveal--left">
+          <span class="pain-point__eyebrow">You're not alone</span>
+          <h2>Feeling Stuck After Studying in Canada?</h2>
+          <p>Many international students come to Canada with big goals, but the path to employment can feel unclear. A career-focused diploma can help you build practical skills, gain confidence, and prepare for opportunities in a real workplace setting.</p>
+          <a href="#request-info" class="pain-point__link">Explore your options <span aria-hidden="true">→</span></a>
         </div>
-        <div class="testimonial-feature__content reveal reveal--right">
-          <h2>Hear From Our Graduates</h2>
-          <p>
-            Real students share how Reeves College helped them gain practical skills,
-            build confidence, and launch careers they are proud of.
-          </p>
-          <a href="#request-info" class="btn btn--primary">Request Info</a>
+        <div class="pain-point__cards">
+          <article class="pain-point-card reveal reveal--soft">
+            <div class="pain-point-card__icon"><span class="material-symbols-outlined">work</span></div>
+            <div class="pain-point-card__body">
+              <h3>Difficulty finding a first job in your field</h3>
+              <p>Local experience requirements can make early applications feel uncertain.</p>
+            </div>
+          </article>
+          <article class="pain-point-card reveal reveal--soft">
+            <div class="pain-point-card__icon"><span class="material-symbols-outlined">domain</span></div>
+            <div class="pain-point-card__body">
+              <h3>Lack of Canadian workplace experience</h3>
+              <p>Employers often value familiarity with Canadian clinic and office settings.</p>
+            </div>
+          </article>
+          <article class="pain-point-card reveal reveal--soft">
+            <div class="pain-point-card__icon"><span class="material-symbols-outlined">handyman</span></div>
+            <div class="pain-point-card__body">
+              <h3>Wanting a more practical, hands-on diploma</h3>
+              <p>Classroom theory alone may not match what hiring managers look for.</p>
+            </div>
+          </article>
+          <article class="pain-point-card reveal reveal--soft">
+            <div class="pain-point-card__icon"><span class="material-symbols-outlined">route</span></div>
+            <div class="pain-point-card__body">
+              <h3>Need for a clear career direction in healthcare</h3>
+              <p>A focused path can help you move forward with more confidence.</p>
+            </div>
+          </article>
+          <article class="pain-point-card reveal reveal--soft">
+            <div class="pain-point-card__icon"><span class="material-symbols-outlined">volunteer_activism</span></div>
+            <div class="pain-point-card__body">
+              <h3>Interest in patient-care work with real-world training</h3>
+              <p>Clinical practice builds skills that support patient-facing roles.</p>
+            </div>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA band -->
-  <section class="cta-band" id="contact">
+  <!-- Why Dental Assisting -->
+  <section class="section" id="why-dental">
     <div class="container">
-      <h2 class="reveal">Ready to Start Your New Career?</h2>
-      <p class="reveal">Take the first step today. Request information and speak with an admissions advisor.</p>
+      <div class="section-header reveal">
+        <h2>Why Dental Assisting?</h2>
+        <p>Build practical healthcare skills in Canada and explore your next step toward a dental assisting career.</p>
+      </div>
+      <div class="benefits-grid reveal-group">
+        <article class="benefit-card reveal reveal--soft">
+          <div class="benefit-card__icon"><span class="material-symbols-outlined">medical_services</span></div>
+          <h3>Practical Healthcare Skills</h3>
+          <p>Learn chairside assisting, infection control, and patient support skills used in real dental clinics.</p>
+        </article>
+        <article class="benefit-card reveal reveal--soft">
+          <div class="benefit-card__icon"><span class="material-symbols-outlined">schedule</span></div>
+          <h3>Shorter Career-Focused Training</h3>
+          <p>Complete a 45-week diploma designed to help you build workplace-ready skills on a focused timeline.</p>
+        </article>
+        <article class="benefit-card reveal reveal--soft">
+          <div class="benefit-card__icon"><span class="material-symbols-outlined">volunteer_activism</span></div>
+          <h3>Patient-Care Experience</h3>
+          <p>Develop communication and clinical support skills that help you prepare for patient-facing healthcare roles.</p>
+        </article>
+        <article class="benefit-card reveal reveal--soft">
+          <div class="benefit-card__icon"><span class="material-symbols-outlined">support_agent</span></div>
+          <h3>Admissions Support for International Students</h3>
+          <p>Get guidance on program requirements, study status questions, and next steps from admissions advisors.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program highlights -->
+  <section class="section section--muted" id="programs">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Program Highlights</h2>
+        <p>A hands-on diploma designed to help you build practical skills for the dental workplace.</p>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlights-content reveal reveal--left">
+          <div class="highlights-card">
+            <ul class="highlights-list">
+              <li><span class="material-symbols-outlined">check_circle</span> 45-week diploma program</li>
+              <li><span class="material-symbols-outlined">check_circle</span> On-campus learning</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Hands-on dental lab training</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Patient care and clinical support skills</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Dental office and records knowledge</li>
+              <li><span class="material-symbols-outlined">check_circle</span> Guidance from admissions advisors</li>
+            </ul>
+            <a href="#request-info" class="highlights-link">Get program details <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="highlights-media reveal reveal--right">
+          <div class="video-wrap">
+            <video controls playsinline preload="metadata" aria-label="Dental Assisting program introduction video">
+              <source src="https://d1utq6mu7oj8xi.cloudfront.net/info/reevescollege/programs/videos/Dental-Assisting-AB-295-2025-09-12-10-57-10.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you'll learn -->
+  <section class="section" id="learn">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What You'll Learn</h2>
+        <p>Topics designed to help you build practical skills for dental clinic environments.</p>
+      </div>
+      <div class="topics-grid reveal-group">
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">chair</span>Chairside Assisting</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">forum</span>Patient Communication</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">cleaning_services</span>Infection Control &amp; Sterilization</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">radiology</span>Dental Radiography Basics</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">science</span>Dental Materials</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">description</span>Dental Office Administration</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">health_and_safety</span>Clinical &amp; Patient Support</div>
+        <div class="topic-card reveal reveal--soft"><span class="material-symbols-outlined">dentistry</span>Dental Workplace Basics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- International student support -->
+  <section class="section section--muted" id="international">
+    <div class="container">
+      <header class="support-header reveal">
+        <h2>Designed for Students Who Need Clear Next Steps</h2>
+        <p class="support-intro">You are not stuck. There may be a more practical next step — and admissions can help you explore whether this program fits your goals in Canada.</p>
+        <a href="tel:18002697095" class="support-link">Talk to Admissions <span aria-hidden="true">→</span></a>
+      </header>
+      <div class="support-grid">
+        <ul class="support-list reveal-group">
+          <li class="support-card reveal reveal--soft">
+            <div class="support-card__icon"><span class="material-symbols-outlined">info</span></div>
+            <span class="support-card__label">Program information guidance</span>
+          </li>
+          <li class="support-card reveal reveal--soft">
+            <div class="support-card__icon"><span class="material-symbols-outlined">fact_check</span></div>
+            <span class="support-card__label">Admission requirement review</span>
+          </li>
+          <li class="support-card reveal reveal--soft">
+            <div class="support-card__icon"><span class="material-symbols-outlined">translate</span></div>
+            <span class="support-card__label">English requirement discussion</span>
+          </li>
+          <li class="support-card reveal reveal--soft">
+            <div class="support-card__icon"><span class="material-symbols-outlined">help</span></div>
+            <span class="support-card__label">Study status question support</span>
+          </li>
+          <li class="support-card reveal reveal--soft">
+            <div class="support-card__icon"><span class="material-symbols-outlined">location_on</span></div>
+            <span class="support-card__label">Campus and start-date guidance</span>
+          </li>
+        </ul>
+        <aside class="support-media reveal reveal--right">
+          <div class="support-media__stack">
+            <div class="safe-note">
+              Admissions advisors can help explain program requirements, but immigration or work eligibility questions should be confirmed with official government or licensed immigration resources.
+            </div>
+            <div class="support-video">
+              <div class="video-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/zdUvtYsuNgI"
+                  title="Reeves College student testimonial"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions checklist -->
+  <section class="section" id="admissions">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Admissions Checklist</h2>
+        <p>Speak with admissions about requirements and learn whether this program fits your goals.</p>
+      </div>
+      <ul class="checklist reveal-group">
+        <li class="reveal reveal--soft"><span class="material-symbols-outlined">check_circle</span> High school diploma or equivalent</li>
+        <li class="reveal reveal--soft"><span class="material-symbols-outlined">check_circle</span> English proficiency if applicable</li>
+        <li class="reveal reveal--soft"><span class="material-symbols-outlined">check_circle</span> Valid study status or eligibility to study</li>
+        <li class="reveal reveal--soft"><span class="material-symbols-outlined">check_circle</span> Criminal record check with vulnerable sector screening</li>
+        <li class="reveal reveal--soft"><span class="material-symbols-outlined">check_circle</span> Immunization / health requirements including TB test</li>
+        <li class="reveal reveal--soft"><span class="material-symbols-outlined">check_circle</span> Admissions interview</li>
+      </ul>
+      <div class="checklist-cta reveal">
+        <a href="#request-info" class="btn btn--primary">Check My Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--muted" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions from international students exploring Dental Assisting.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            Can international students apply?
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+          <div class="faq-item__answer">
+            Yes, international students can explore the program. Admissions advisors can review your study status and help explain program requirements and next steps.
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            Is this program good for students who want practical training?
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+          <div class="faq-item__answer">
+            Yes. The program focuses on hands-on dental lab training, patient care skills, and workplace knowledge to help you build practical healthcare skills.
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            How long is the Dental Assisting program?
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+          <div class="faq-item__answer">
+            The Dental Assisting program is a 45-week diploma designed for career-focused training on a shorter timeline than many degree programs.
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            Do I need healthcare experience before applying?
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+          <div class="faq-item__answer">
+            Prior healthcare experience is not always required. Admissions can review your background and help you understand whether the program fits your goals.
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-item__question" aria-expanded="false">
+            What happens after I request information?
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+          <div class="faq-item__answer">
+            An admissions advisor will contact you with program details, requirements, campus options, and suggested next steps based on your study status and goals.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="cta-band section" id="contact">
+    <div class="container">
+      <h2 class="reveal">Ready to Explore a Practical Healthcare Diploma?</h2>
+      <p class="reveal">Request program information today and speak with admissions about requirements, start dates, and whether Dental Assisting is the right next step for your goals in Canada.</p>
       <div class="cta-band__actions reveal-group">
-        <a href="#request-info" class="btn btn--primary reveal">Request Info</a>
-        <a href="tel:18002697095" class="btn btn--outline-light">Call 1-800-269-7095</a>
+        <a href="#request-info" class="btn btn--primary reveal">Request Program Info</a>
+        <a href="tel:18002697095" class="btn btn--outline-light reveal">Talk to Admissions</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="campuses">
     <div class="container">
       <div class="footer-grid reveal-group">
         <div class="reveal reveal--soft">
           <a href="#" class="logo footer-logo">
-            <img
-              src="assets/logo-desktop.svg"
-              alt="Reeves College"
-              class="logo__img logo__img--footer"
-              width="173"
-              height="50"
-            />
+            <img src="assets/logo-desktop.svg" alt="Reeves College" class="logo__img logo__img--footer" width="173" height="50" />
           </a>
-          <p class="footer-about">
-            Reeves College provides career-focused diploma programs to help students achieve their professional goals.
-          </p>
+          <p class="footer-about">Reeves College provides career-focused diploma programs to help students build practical skills and explore opportunities in Canada.</p>
         </div>
         <div class="reveal reveal--soft">
           <h4>Programs</h4>
           <ul>
-            <li><a href="#program-intro">Dental Assisting</a></li>
-            <li><a href="#programs">Business</a></li>
-            <li><a href="#programs">Health Care</a></li>
-            <li><a href="#programs">Legal</a></li>
+            <li><a href="#programs">Dental Assisting</a></li>
+            <li><a href="#learn">What You'll Learn</a></li>
+            <li><a href="#why-dental">Why Dental Assisting</a></li>
           </ul>
         </div>
         <div class="reveal reveal--soft">
           <h4>Admissions</h4>
           <ul>
-            <li><a href="#request-info">Apply Now</a></li>
-            <li><a href="#request-info">Request Info</a></li>
-            <li><a href="#">Financial Aid</a></li>
-            <li><a href="#">Campus Tours</a></li>
+            <li><a href="#request-info">Request Program Info</a></li>
+            <li><a href="#admissions">Admissions Checklist</a></li>
+            <li><a href="#international">International Students</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="reveal reveal--soft">
-          <h4>Contact</h4>
+          <h4>Campuses</h4>
           <ul>
             <li><a href="tel:18002697095">1-800-269-7095</a></li>
-            <li><a href="#">Calgary Campus</a></li>
-            <li><a href="#">Edmonton Campus</a></li>
-            <li><a href="#">Lloydminster Campus</a></li>
+            <li>Calgary Campus</li>
+            <li>Edmonton Campus</li>
+            <li>Lloydminster Campus</li>
           </ul>
         </div>
       </div>
@@ -1322,79 +538,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var header = document.getElementById('site-header');
-      var menuToggle = document.getElementById('menu-toggle');
-      var mobileNav = document.getElementById('mobile-nav');
-
-      /* Shadow on scroll */
-      window.addEventListener('scroll', function () {
-        header.classList.toggle('is-scrolled', window.scrollY > 4);
-      }, { passive: true });
-
-      /* Mobile menu toggle */
-      menuToggle.addEventListener('click', function () {
-        var isOpen = mobileNav.classList.toggle('is-open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-        menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      });
-
-      /* Close mobile menu on link click */
-      mobileNav.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          mobileNav.classList.remove('is-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-          menuToggle.setAttribute('aria-label', 'Open menu');
-        });
-      });
-
-      /* Prevent form submit (demo) */
-      document.querySelector('.lead-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Thank you! An advisor will contact you shortly.');
-      });
-
-      /* Subtle scroll reveal */
-      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var revealEls = document.querySelectorAll('.reveal');
-
-      document.querySelectorAll('.reveal-group').forEach(function (group) {
-        group.querySelectorAll('.reveal').forEach(function (el, i) {
-          el.style.setProperty('--reveal-delay', (i * 90) + 'ms');
-        });
-      });
-
-      if (reducedMotion) {
-        revealEls.forEach(function (el) {
-          el.classList.add('is-visible');
-        });
-        return;
-      }
-
-      var heroReveals = document.querySelectorAll('.hero .reveal');
-      heroReveals.forEach(function (el, i) {
-        el.style.setProperty('--reveal-delay', (i * 120) + 'ms');
-        requestAnimationFrame(function () {
-          el.classList.add('is-visible');
-        });
-      });
-
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-      revealEls.forEach(function (el) {
-        if (!el.closest('.hero')) {
-          observer.observe(el);
-        }
-      });
-    })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
